@@ -17,5 +17,3 @@ applications:
   services: 
   - DVC-cloudantNoSQLDB
   - DVC-iotf-service
-
-    
