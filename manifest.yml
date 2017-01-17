@@ -1,0 +1,9 @@
+---
+applications:
+- name: iot-manufacturing-plant-vc1
+  memory: 256M
+  instances: 1
+  host: iot-manufacturing-plant-vc1
+  path: .
+  buildpack: https://github.com/cloudfoundry-incubator/staticfile-buildpack 
+
