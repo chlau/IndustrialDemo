@@ -1,19 +1,20 @@
+---
 declared-services:
-  DVC-iotf-service:
-    label:iotf-service
-    plan:iotf-service-standard
-  DVC-cloudantNoSQLDB:
-    label:cloudantNoSQLDB
-    plan:Lite
-  
+  ABC-iotf-service:
+    label: iotf-service
+    plan: iotf-service-standard
+  ABC-cloudantNoSQLDB:
+    label: cloudantNoSQLDB
+    plan: Lite
 applications:
-- name: iot-manufacturing-plant-vc1
+- name: vc
+  random-route: true
   memory: 256M
   instances: 1
-  host: iot-manufacturing-plant-vc1
+  host: vc
   path: .
   buildpack: https://github.com/cloudfoundry-incubator/staticfile-buildpack
   command: node --max-old-space-size=384 node_modules/node-red/red.js --settings ./bluemix-settings.js -v
   services: 
-  - DVC-cloudantNoSQLDB
-  - DVC-iotf-service
+  - ABC-iotf-service
+  - ABC-cloudantNoSQLDB
