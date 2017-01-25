@@ -1,6 +1,5 @@
-# Car Simulator
+# Industrial Demo
 
-Run index.html in browser to run the car simulator. 
 
 To update the credentials, navigate to js/realtime.js and update the 
 
